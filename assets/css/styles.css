@@ -50,7 +50,7 @@ body {
   background-color: var(--black-color);
   color: var(--white-color);
   font-weight: 700;
-  overflow: hidden;
+  overflow: visible;
 }
 
 h1,
@@ -73,6 +73,12 @@ img {
   height: auto;
 }
 
+.home__social a {
+  width: min-content;
+  height: min-content;
+  margin-bottom: 2rem;
+}
+
 /*----- LAYOUT -----*/
 .bd-grid {
   max-width: 1200px;
@@ -87,6 +93,8 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--black-color);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Initial shadow (invisible) */
+  transition: box-shadow 0.3s; /* Add a transition for a smooth effect */
 }
 
 /*----- PAGES -----*/
@@ -176,6 +184,7 @@ img {
 .l-main {
   height: calc(100vh - 3rem);
   background-color: var(--black-color);
+  overflow: visible;
 }
 
 .home {
@@ -252,7 +261,6 @@ img {
 }
 
 .home__social-icon {
-  margin-bottom: 2rem;
   font-size: 1.8rem;
   cursor: pointer;
   color: var(--white-color);
@@ -347,4 +355,65 @@ img {
 .third {
   background-color: var(--first-color);
   left: 66.6%;
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  text-align: center;
+  opacity: 0;
+}
+
+/* CSS for the fade-in animation */
+.about.animate {
+  opacity: 1;
+  transition: opacity 3s ease-in-out;
+}
+
+.about__content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about__photo img {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about__info h2,
+.about__skills h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.about__info p {
+  font-size: 16px;
+}
+
+.about__skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about__skills li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.about__photo img {
+  width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .about__content {
+    text-align: center;
+  }
+
+  .about__photo {
+    align-self: center;
+  }
 }
