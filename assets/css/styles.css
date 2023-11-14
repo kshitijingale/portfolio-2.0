@@ -45,7 +45,7 @@
 }
 
 body {
-  margin: 3rem 0 0 0;
+  /* margin: 3rem 0 0 0; */
   font-family: var(--body-font);
   background-color: var(--black-color);
   color: var(--white-color);
@@ -372,10 +372,6 @@ section {
 @media screen and (max-width: 768px) {
   section {
     margin: 0 2%;
-  }
-
-  .home {
-    height: 90%;
   }
 
   .home__img {
