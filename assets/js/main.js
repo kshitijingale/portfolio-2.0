@@ -15,7 +15,6 @@ showMenu('nav-toggle', 'nav-menu')
 const navMenu = document.getElementById('nav-menu');
 
 function closeMobileMenu() {
-    console.log("clicked");
     navMenu.classList.remove('show');
 }
 
@@ -24,35 +23,6 @@ const navItems = document.querySelectorAll('.nav__item');
 navItems.forEach((item) => {
     item.addEventListener('click', closeMobileMenu);
 });
-
-// Function to update the header shadow
-function updateHeaderShadow() {
-    const header = document.querySelector('.l-header');
-    if (window.scrollY > 0) {
-        header.style.boxShadow = '0px 5px 10px rgba(0, 0, 0, 0.2)';
-    } else {
-        header.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0)';
-    }
-}
-
-// Add an event listener to the window to detect scrolling
-window.addEventListener('scroll', updateHeaderShadow);
-
-// JavaScript to add the "animate" class when the "About" section is scrolled into view
-const aboutSection = document.querySelector('.about');
-const aboutOffset = aboutSection.offsetTop;
-const windowHeight = window.innerHeight;
-
-function addAnimationClass() {
-    const scrollPosition = window.scrollY;
-    if (scrollPosition > aboutOffset - windowHeight) {
-        aboutSection.classList.add('animate');
-        window.removeEventListener('scroll', addAnimationClass); // Remove the scroll event listener once animation is applied
-    }
-}
-
-window.addEventListener('scroll', addAnimationClass);
-
 
 /*----- ANIMATE -----*/
 // OVERLAY
@@ -73,3 +43,7 @@ gsap.from('.nav__item', { opacity: 0, duration: 3, delay: 3.2, y: 25, ease: 'exp
 
 // SOCIAL
 gsap.from('.home__social-icon', { opacity: 0, duration: 3, delay: 4, y: 25, ease: 'expo.out', stagger: .2 })
+
+
+
+
