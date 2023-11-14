@@ -374,6 +374,10 @@ section {
     margin: 0 2%;
   }
 
+  .home {
+    height: 90%;
+  }
+
   .home__img {
     bottom: 3%;
   }
