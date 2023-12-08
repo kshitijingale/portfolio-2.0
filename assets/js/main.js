@@ -24,6 +24,10 @@ navItems.forEach((item) => {
     item.addEventListener('click', closeMobileMenu);
 });
 
+// Portfolio carousel 
+
+
+
 /*----- ANIMATE -----*/
 // OVERLAY
 gsap.to(".first", 1.5, { delay: .5, top: "-100%", ease: Expo.easeInOut });

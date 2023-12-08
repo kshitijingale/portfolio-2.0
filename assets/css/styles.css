@@ -50,12 +50,15 @@ body {
   background-color: var(--black-color);
   color: var(--white-color);
   font-weight: 700;
-  overflow: visible;
+  /* overflow: visible; */
+  overflow: hidden;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
+  font-weight: 700;
 }
 
 ul {
@@ -68,7 +71,7 @@ a {
   text-decoration: none;
 }
 
-img {
+.home__img img {
   max-width: 85%;
   height: auto;
 }
@@ -187,6 +190,10 @@ img {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   height: 100vh;
+}
+
+.l-main::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -400,9 +407,8 @@ section {
 }
 
 .about-me-image img {
-  width: 100%;
+  max-width: 85%;
   height: auto;
-  /* border-radius: 50%; */
 }
 
 .about-me-content {
@@ -490,5 +496,101 @@ section {
 
   .about-me-content {
     width: 100%;
+  }
+}
+
+/* Portfolio section */
+
+.portfolio {
+  flex-direction: column;
+}
+
+.portfolio h1 {
+  font-size: 32px;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#carouselExampleIndicators {
+  width: 100%;
+  display: none;
+}
+
+.project-card {
+  max-width: 330px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.04); /* Glassmorphism-style background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Glassmorphism backdrop filter */
+}
+
+.project-card img {
+  max-width: inherit;
+  height: auto;
+  opacity: 0.6;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-details h3 {
+  margin: 0%;
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.project-details p {
+  color: #ccc; /* Lighter text color for description */
+}
+
+.project-details p .tech {
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.demo-button,
+.source-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #ec6780b3;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.demo-button:hover,
+.source-button:hover {
+  background: var(--first-color);
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1140px) {
+  #carouselExampleIndicators {
+    display: block;
+  }
+
+  .projects {
+    display: none;
+  }
+
+  .portfolio h4 {
+    text-align: center;
   }
 }
