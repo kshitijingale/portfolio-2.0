@@ -74,6 +74,7 @@ a {
 .home__img img {
   max-width: 85%;
   height: auto;
+  justify-self: end;
 }
 
 .home__social a {
@@ -263,6 +264,7 @@ a {
   bottom: 0;
   width: 291px;
   z-index: var(--z-normal);
+  display: grid;
 }
 
 .home__social {
@@ -287,7 +289,7 @@ a {
 }
 
 /*----- MEDIA QUERIES -----*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   body {
     margin: 0;
   }
@@ -597,5 +599,122 @@ a:hover {
   .carousel-control-next,
   .carousel-control-prev {
     width: 5%;
+  }
+}
+
+/* Blog section */
+
+.blog {
+  flex-direction: column;
+  justify-content: center;
+  gap: 10%;
+}
+
+.blog h1 {
+  font-size: 32px;
+}
+
+.blog-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 900px;
+}
+
+.blog-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.blog-details {
+  color: #9e9b9b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blog-details h3 a {
+  color: #fff;
+}
+
+.blog-details h3 a:hover {
+  color: #ccc;
+}
+
+.blog-img {
+  height: 155px;
+  width: 295px;
+}
+
+.blog-img img {
+  width: -webkit-fill-available;
+  border-radius: 4px;
+}
+
+.blog-date {
+  margin-right: 0.6rem;
+}
+
+.blog-carousel {
+  display: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .blog-details h3 {
+    font-size: 1.23rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .blog-card-wrapper {
+    display: none;
+  }
+
+  .blog-card {
+    max-width: 70%;
+    flex-direction: column;
+    margin: auto auto 10% auto;
+  }
+
+  .blog-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .blog-carousel {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .home {
+    row-gap: 1.3rem;
+  }
+
+  .blog {
+    gap: 0;
+  }
+
+  .blog-card {
+    max-width: 95%;
+    margin: 22% auto;
+    padding: 35px 20px;
+  }
+
+  .blog-details > p,
+  div {
+    font-size: 14px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
   }
 }
