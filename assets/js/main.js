@@ -24,7 +24,37 @@ navItems.forEach((item) => {
     item.addEventListener('click', closeMobileMenu);
 });
 
-// Portfolio carousel 
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Display the modal on form submission
+    openModal();
+
+    // Clear the form fields
+    clearForm();
+});
+
+function openModal() {
+    document.getElementById('successModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('successModal').style.display = 'none';
+}
+
+function clearForm() {
+    // Get the form element
+    const form = document.getElementById('contactForm');
+
+    // Loop through each form element and reset its value
+    for (let i = 0; i < form.elements.length; i++) {
+        if (form.elements[i].type !== 'submit') {
+            form.elements[i].value = '';
+        }
+    }
+}
+
 
 
 
