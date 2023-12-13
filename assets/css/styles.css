@@ -529,7 +529,7 @@ section {
 
 .project-card {
   max-width: 330px;
-  margin: 50px auto;
+  margin: 20px auto 80px auto;
   background: rgba(255, 255, 255, 0.04); /* Glassmorphism-style background */
   border-radius: 10px;
   overflow: hidden;
@@ -708,7 +708,7 @@ a:hover {
 
   .blog-card {
     max-width: 95%;
-    margin: 22% auto;
+    margin: 10% auto 22% auto;
     padding: 35px 20px;
   }
 
@@ -733,7 +733,7 @@ a:hover {
 
 .contact-container {
   width: 60%;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 20px;
   background-color: transparent;
   border-radius: 8px;
