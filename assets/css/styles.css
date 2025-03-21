@@ -659,6 +659,7 @@ a:hover {
 
 .blog-img img {
   width: -webkit-fill-available;
+  height: -webkit-fill-available;
   border-radius: 4px;
 }
 
